@@ -1,0 +1,1 @@
+Django web app built by following along with the book 'Test-Driven Development with Python' (1st edition) by Harry J.W. Percival.
