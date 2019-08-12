@@ -1,12 +1,13 @@
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import chromedriver_binary  # Adds chromedriver binary to PATH
 
 
 class NewVisitorTest(StaticLiveServerTestCase):
 
     def setUp(self):
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.Chrome()
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
@@ -59,7 +60,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         # sure that no information of Alice's is coming through from cookies
         # etc.
         self.browser.quit()
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.Chrome()
 
         # Bob visits the home page. There is no sign of Alice's list.
         self.browser.get(self.live_server_url)
