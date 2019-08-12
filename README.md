@@ -12,7 +12,7 @@ Django web app for creating to-do lists. It was developed by following along wit
 
 ## Instructions
 
-Follow these instructions to get the app up and running on your local machine:
+Follow the instructions below to get the app up and running on your local machine. To run the Selenium tests, please make sure to have Google Chrome installed.
 
 ```sh
 # Clone repo
@@ -20,8 +20,8 @@ git clone https://github.com/ajgeers/tdd-with-python.git
 cd tdd-with-python
 
 # Create conda environment
-conda env create -n tdd_with_python -f environment.yml
-source activate tdd_with_python
+conda env create -n tdd-with-python -f environment.yml
+conda activate tdd-with-python
 
 # Run app
 python manage.py migrate  # create database and apply migrations
